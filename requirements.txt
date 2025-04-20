@@ -1,0 +1,7 @@
+flask==2.3.2
+pandas==1.5.3
+python-dotenv==1.0.0
+PyPDF2==3.0.1
+langchain==0.0.208
+langchain-core==0.0.208
+langchain-mistralai==0.0.5
