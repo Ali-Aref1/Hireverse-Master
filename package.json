@@ -1,11 +1,10 @@
 {
-  "dependencies": {
-    "concurrently": "^9.1.2"
-  },
-  "scripts":{
-    "start:react": "npm run dev --prefix Hireverse-React",
-    "start:node": "npm run start --prefix Hireverse-Server",
-    "start:flask": "python \"./Hireverse-Interviewer/LAST GOOD WITH CV.py\" ",
-    "start:all": "concurrently --kill-others-on-fail \"npm run start:react\" \"npm run start:node\" \"npm run start:flask\""
+  "name": "hireverse-master",
+  "version": "1.0.0",
+  "scripts": {
+    "start:react": "cd Hireverse-React && npm run dev",
+    "start:node": "cd Hireverse-Server && npm start",
+    "start:flask": "cd Hireverse-Interviewer && python \"LAST GOOD WITH CV.py\"",
+    "start:all": "start cmd /k \"npm run start:node\" && start cmd /k \"npm run start:react\" && start cmd /k \"npm run start:flask\""
   }
 }
