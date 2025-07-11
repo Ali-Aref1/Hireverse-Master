@@ -4,9 +4,11 @@
   "scripts": {
     "start:react": "cd Hireverse-React && npm run dev",
     "start:node": "cd Hireverse-Server && npm start",
-    "start:flask": "cd Hireverse-Interviewer && .\\.venv\\Scripts\\activate.bat && python \"LAST GOOD WITH CV.py\"",
+    "start:flask": "cd Hireverse-Interviewer && .\\.venv\\Scripts\\activate.bat && nodemon \"LAST GOOD WITH CV.py\"",
     "start:adk": "cd Hireverse-Interviewer && adk api_server",
-    "start:all": "start cmd /k \"npm run start:node\" && start cmd /k \"npm run start:react\" && start cmd /k \"npm run start:flask\" && start cmd /k \"npm run start:adk\"",
+    "start:avatar": "start \"\" \"UnrealAvatar/Avatarv2.exe\" -PixelStreamingURL=ws://127.0.0.1:8888 && .\\UnrealAvatar\\Avatarv2\\Samples\\PixelStreaming\\WebServers\\SignallingWebServer\\platform_scripts\\cmd\\start_with_stun.bat",
+    "start:all": "start cmd /k \"npm run start:node\" && start cmd /k \"npm run start:react\" && start cmd /k \"npm run start:flask\" && start cmd /k \"npm run start:adk\" && start cmd /k \"npm run start:avatar\" && start cmd /k \"npm run start:tunnel\"",
+    "start:tunnel": "cd Hireverse-Interviewer && .\\.venv\\Scripts\\activate.bat && nodemon .\\Hireverse-neuroSync\\NeuroSync_Local_API_main\\neurosync_local_api.py",
     "setup:react": "cd Hireverse-React && npm install",
     "setup:node": "cd Hireverse-Server && npm install",
     "setup:flask": "cd Hireverse-Interviewer && python -m venv .venv && .\\.venv\\Scripts\\activate.bat && pip install -r requirements.txt",
